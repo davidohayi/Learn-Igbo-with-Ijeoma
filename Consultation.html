@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>15 Minutes Consultation</title>
+    <link rel="shortcut icon" href="LIWI.png" type="image/x-icon">
+    <link rel="stylesheet" href="Consultation.css">
+    <script src="Consultation.js"></script>
+</head>
+<body>
+    <!-- RIGHT — Booking Card -->
+            <div class="booking-card">
+                <div class="booking-header">
+                    <h2>Book Your Spot</h2>
+                    <p>Choose a time that works for you</p>
+                </div>
+
+                <div class="booking-body">
+                    <div class="calendly-placeholder">
+                        <div class="calendly-icon">📅</div>
+                        <p>Click below to open the booking calendar</p>
+                        <a href="https://calendly.com/davidohayi/30min" target="_blank" class="btn-book">
+                            Open Booking Calendar →
+                        </a>
+                        <span class="calendly-note">Powered by Calendly — pick any available slot</span>
+                    </div>
+
+                    <div class="divider"></div>
+
+                    <p class="or-text">Or fill in your details and we'll reach out to schedule:</p>
+
+                    <form id="consultForm" action="https://formspree.io/f/xqewgroo" method="POST">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" placeholder="Ada Okafor" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="datetime">Preferred Date & Time</label>
+                            <input type="datetime-local" id="datetime" name="datetime" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="level">Your Igbo Level</label>
+                            <select id="level" name="level">
+                                <option value="">Select your level</option>
+                                <option value="beginner">Complete Beginner</option>
+                                <option value="some">I know a few words</option>
+                                <option value="intermediate">Intermediate</option>
+                                <option value="reconnecting">Reconnecting with heritage</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn-submit">Request My Session →</button>
+                        <div class="gold-bar"></div>
+                        <input type="hidden" name="_subject" value="New Consultation Request — Igbo Kwenu">
+                        <input type="hidden" name="_next" value="Thanks.html">
+                    </form>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- BACK LINK -->
+        <div class="back-link">
+            <a href="index.htm">← Back to Home</a>
+        </div>
+
+    </main>
+</body>
+</html>

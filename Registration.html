@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration — Igbo Kwenu</title>
+    <link rel="shortcut icon" href="LIWI.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="registration.css">
+    <!-- FIX 3: Added type="module" so Firebase imports work correctly -->
+    <script type="module" src="registration.js"></script>
+</head>
+<body>
+
+    <div class="registration-card">
+
+        <div class="card-header">
+            <div class="brand">
+                <img src="LIWI.png" alt="Igbo Kwenu Logo">
+                <span class="brand-name">IGBO KWENU</span>
+            </div>
+            <h1>Join Our Community</h1>
+            <p>Start your Igbo language journey today</p>
+        </div>
+
+        <div class="card-body">
+            <!-- FIX 1: Added id="registrationForm" and removed action/method (Firebase handles submission) -->
+            <form id="registrationForm">
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="firstname">First Name</label>
+                        <input type="text" id="firstname" name="firstname" placeholder="Ada" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastname">Last Name</label>
+                        <input type="text" id="lastname" name="lastname" placeholder="Okafor" required>
+                    </div>
+                </div>
+
+                <div class="divider"></div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Create a strong password" maxlength="8" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirm-password">Confirm Password</label>
+                    <!-- FIX 2: Changed id from "confirm_password" (underscore) to "confirm-password" (hyphen) to match the JS -->
+                    <input type="password" id="confirm-password" name="confirm-password" placeholder="Re-enter your password" maxlength="8" required>
+                </div>
+
+                <button type="submit" class="btn-register">Create My Account →</button>
+                <div class="gold-bar"></div>
+
+            </form>
+
+            <p class="login-link">Already have an account? <a href="signin.html">Sign in</a></p>
+
+            <div class="social-buttons">
+                <button class="social-btn google-signin-btn" type="button" aria-label="Login with Google">
+                  <img src="Google.png" alt="Google Logo" width="20" height="20">
+                  <span><span class="extra-text">SignUp with</span> Google</span>
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
